@@ -1,0 +1,54 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CmsLanguageController;
+use App\Http\Controllers\CmsPageController;
+use App\Http\Controllers\CmsSectionController;
+use App\Http\Controllers\CmsItemController;
+use App\Http\Controllers\CmsLinkController;
+
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [
+            \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+            \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+            \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
+        ],
+    ],
+    function () {
+        Route::get('/', function () {
+            return view('backend.index');
+        });
+
+        // CMS Routes
+        Route::prefix('cms')->name('cms.')->group(function () {
+            // Languages (Modal CRUD)
+            Route::get('languages/data', [CmsLanguageController::class, 'data'])->name('languages.data');
+            Route::post('languages/{language}/toggle-status', [CmsLanguageController::class, 'toggleStatus'])->name('languages.toggle-status');
+            Route::resource('languages', CmsLanguageController::class)->except(['create', 'edit']);
+
+            // Pages (Full Page CRUD)
+            Route::get('pages/data', [CmsPageController::class, 'data'])->name('pages.data');
+            Route::post('pages/{page}/toggle-status', [CmsPageController::class, 'toggleStatus'])->name('pages.toggle-status');
+            Route::resource('pages', CmsPageController::class);
+
+            // Sections (Full Page CRUD)
+            Route::get('sections/data', [CmsSectionController::class, 'data'])->name('sections.data');
+            Route::post('sections/{section}/toggle-status', [CmsSectionController::class, 'toggleStatus'])->name('sections.toggle-status');
+            Route::get('sections/{section}/get-form', [CmsSectionController::class, 'getForm'])->name('sections.get-form');
+        Route::resource('sections', CmsSectionController::class);
+
+            // Items (Full Page CRUD)
+            Route::get('items/data', [CmsItemController::class, 'data'])->name('items.data');
+            Route::post('items/{item}/toggle-status', [CmsItemController::class, 'toggleStatus'])->name('items.toggle-status');
+            Route::get('items/{item}/get-form', [CmsItemController::class, 'getForm'])->name('items.get-form');
+        Route::resource('items', CmsItemController::class);
+
+            // Links (Modal CRUD)
+            Route::get('links/data', [CmsLinkController::class, 'data'])->name('links.data');
+            Route::post('links/{link}/toggle-status', [CmsLinkController::class, 'toggleStatus'])->name('links.toggle-status');
+            Route::resource('links', CmsLinkController::class)->except(['create', 'edit']);
+        });
+    }
+);
