@@ -75,7 +75,7 @@ $heroSection = $homePage->sections->where('name', 'Hero')->first();
 				</div>
 				<div class="container">
 					<div class="banner__content">
-						<h4 data-animation="slideInRight" data-duration="2s"
+						<!-- <h4 data-animation="slideInRight" data-duration="2s"
 							data-delay=".3s" class="text-white mb-20">
 							<svg class="me-1" width="40" height="16"
 								viewBox="0 0 40 16" fill="none"
@@ -88,18 +88,17 @@ $heroSection = $homePage->sections->where('name', 'Hero')->first();
 									rx="8" fill="white" />
 							</svg>
 							{{ $translation->sub_title ?? '' }}
-						</h4>
-						<h1 data-animation="slideInRight" data-duration="2s"
+						</h4> -->
+						<!-- <h1 data-animation="slideInRight" data-duration="2s"
 							data-delay=".5s" class="text-white">
 							{{ $translation->title ?? '' }}
 						</h1>
-						{!! $translation->content ?? '' !!}
+						{!! $translation->content ?? '' !!} -->
 						<a data-animation="slideInRight" data-duration="2s"
 							data-delay=".9s"
 							href="{{ route('frontend.about.index') }}"
 							class="btn-one mt-60">{{ __('Explore More') }}
-							<i
-								class="fa-regular fa-arrow-right-long"></i></a>
+							<i class="fa-regular fa-arrow-right-long"></i></a>
 					</div>
 				</div>
 			</div>
