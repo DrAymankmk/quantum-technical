@@ -253,5 +253,15 @@
     "Error deleting media: ": "Error deleting media: ",
     "Translation added successfully": "Translation added successfully",
     "Translation updated successfully": "Translation updated successfully",
-    "Translation deleted successfully": "Translation deleted successfully"
+    "Translation deleted successfully": "Translation deleted successfully",
+    "Edit Profile": "Edit Profile",
+    "Update your account's profile information and email address.": "Update your account's profile information and email address.",
+    "Profile updated successfully.": "Profile updated successfully.",
+    "Save Changes": "Save Changes",
+    "Use a strong password to keep your account secure.": "Use a strong password to keep your account secure.",
+    "Password updated successfully.": "Password updated successfully.",
+    "Once your account is deleted, all of its resources and data will be permanently deleted.": "Once your account is deleted, all of its resources and data will be permanently deleted.",
+    "Please enter your password to confirm.": "Please enter your password to confirm.",
+    "Are you sure you want to delete your account? This action cannot be undone.": "Are you sure you want to delete your account? This action cannot be undone.",
+    "Enter your password": "Enter your password"
 }

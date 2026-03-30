@@ -253,5 +253,15 @@
     "Error deleting media: ": "خطأ في حذف الوسائط: ",
     "Translation added successfully": "تمت إضافة الترجمة بنجاح",
     "Translation updated successfully": "تم تحديث الترجمة بنجاح",
-    "Translation deleted successfully": "تم حذف الترجمة بنجاح"
+    "Translation deleted successfully": "تم حذف الترجمة بنجاح",
+    "Edit Profile": "تعديل الملف الشخصي",
+    "Update your account's profile information and email address.": "قم بتحديث معلومات ملفك الشخصي وعنوان بريدك الإلكتروني.",
+    "Profile updated successfully.": "تم تحديث الملف الشخصي بنجاح.",
+    "Save Changes": "حفظ التغييرات",
+    "Use a strong password to keep your account secure.": "استخدم كلمة مرور قوية للحفاظ على أمان حسابك.",
+    "Password updated successfully.": "تم تحديث كلمة المرور بنجاح.",
+    "Once your account is deleted, all of its resources and data will be permanently deleted.": "بمجرد حذف حسابك، سيتم حذف جميع موارده وبياناته نهائيًا.",
+    "Please enter your password to confirm.": "يرجى إدخال كلمة المرور للتأكيد.",
+    "Are you sure you want to delete your account? This action cannot be undone.": "هل أنت متأكد أنك تريد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء.",
+    "Enter your password": "أدخل كلمة المرور"
 }
