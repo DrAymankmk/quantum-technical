@@ -38,43 +38,14 @@
 
 
 
-           <!-- Notifications -->
-           <li class="dropdown notification-list">
-               <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                   <i class="dripicons-bell noti-icon"></i>
-                   <span class="noti-icon-badge"></span>
-               </a>
-               <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg">
-
-                   <!-- item-->
-                   <div class="dropdown-item noti-title">
-                       <h5 class="m-0">
-                           <span class="float-end">
-                               <!-- <a href="javascript: void(0);" class="text-dark">
-                                   <small>Clear All</small>
-                               </a> -->
-                           </span>Notification
-                       </h5>
-                   </div>
-
-                   <div id="notifications-list" style="max-height: 230px;" data-simplebar="">
-                      
-                   </div>
-
-                   <!-- All-->
-                   <!-- <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
-                       View All
-                   </a> -->
-
-               </div>
-           </li>
 
 
-           <li class="notification-list">
+
+           <!-- <li class="notification-list">
                <a class="nav-link end-bar-toggle" href="javascript: void(0);">
                    <i class="dripicons-gear noti-icon"></i>
                </a>
-           </li>
+           </li> -->
 
            <li class="dropdown notification-list">
                <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -93,7 +64,7 @@
                    </div>
 
                    <!-- item-->
-                   <a href="" class="dropdown-item notify-item">
+                  <a href="{{ route('profile.edit') }}" class="dropdown-item notify-item">
                        <i class="mdi mdi-account-circle me-1"></i>
                        <span>My Account</span>
                    </a>
@@ -127,7 +98,7 @@
                            </a>
 
                        </form>
-                      
+
                    </a>
                </div>
            </li>
@@ -136,6 +107,6 @@
        <button class="button-menu-mobile open-left">
            <i class="mdi mdi-menu"></i>
        </button>
-      
+
    </div>
    <!-- end Topbar -->
