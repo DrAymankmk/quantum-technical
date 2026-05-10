@@ -1,21 +1,21 @@
 @php
 $footerSection = \App\Models\CmsSection::where('name', 'Footer')->first();
 $footerContentItem = $footerSection
-    ? \App\Models\CmsItem::where('cms_section_id', $footerSection->id)
-        ->where('slug', 'footer-content')
-        ->where('is_active', true)
-        ->orderBy('order')
-        ->first()
-    : null;
+? \App\Models\CmsItem::where('cms_section_id', $footerSection->id)
+->where('slug', 'footer-content')
+->where('is_active', true)
+->orderBy('order')
+->first()
+: null;
 $footerContent = $footerContentItem
-    ? ($footerContentItem->getTranslatedAttribute('content') ?? $footerContentItem->content ?? '')
-    : '';
+? ($footerContentItem->getTranslatedAttribute('content') ?? $footerContentItem->content ?? '')
+: '';
 $quickLinks = $footerSection
-    ? $footerSection->links()->where('type', 'quick-link')->active()->ordered()->get()
-    : collect();
+? $footerSection->links()->where('type', 'quick-link')->active()->ordered()->get()
+: collect();
 $socialLinks = $footerSection
-    ? $footerSection->links()->where('type', 'social-link')->get()
-    : collect();
+? $footerSection->links()->where('type', 'social-link')->get()
+: collect();
 @endphp
 
 <!-- Footer area start here -->
@@ -50,11 +50,12 @@ $socialLinks = $footerSection
 					<img src="{{ asset('frontend/template-1/assets/images/logo-1.png') }}"
 						alt="image">
 				</a>
-				<p> {{ $footerContent }}
+				<p> {!! $footerContent !!}
 				</p>
 				<div class="social-icon">
 					@foreach($socialLinks as $link)
-					@php $linkName = $link->getTranslatedAttribute('name') ?? $link->name; @endphp
+					@php $linkName = $link->getTranslatedAttribute('name') ?? $link->name;
+					@endphp
 					<a href="{{ $link->link }}" target="{{ $link->target ?? '_blank' }}"
 						title="{{ $linkName }}" aria-label="{{ $linkName }}">
 						<i class="{{ $link->icon }}"></i>
