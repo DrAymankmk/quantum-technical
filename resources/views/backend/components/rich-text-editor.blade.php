@@ -58,6 +58,8 @@
                 @endif
             });
 
+            
+
             // Set initial content
             if (textarea.value) {
                 quill.root.innerHTML = textarea.value;
