@@ -52,13 +52,9 @@
                         ['clean']
                     ]
                 },
-                placeholder: '{{ $placeholder ?? "Enter content..." }}',
-                @if(isset($direction) && $direction === 'rtl')
-                direction: 'rtl'
-                @endif
             });
 
-            
+
 
             // Set initial content
             if (textarea.value) {
