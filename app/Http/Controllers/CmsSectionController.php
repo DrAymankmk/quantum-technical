@@ -165,6 +165,11 @@ class CmsSectionController extends Controller
             }
         }
 
+        if ($request->input('redirect') === 'builder') {
+            return redirect()->route('cms.pages.builder', $section->cms_page_id)
+                ->with('success', __('Section created successfully'));
+        }
+
         return redirect()->route('cms.sections.index', ['page_id' => $section->cms_page_id])
             ->with('success', __('Section created successfully'));
     }

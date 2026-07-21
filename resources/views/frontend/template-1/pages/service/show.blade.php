@@ -26,8 +26,7 @@ null, true);
 		<h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
 			{{ $servicePage->translation($locale)->title }}</h2>
 		<div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-			<a href="{{ route('frontend.home.index') }}">{{ __('Home') }}</a><span><i
-					class="fa-regular fa-angles-right mx-2"></i>{{ $servicePage->translation($locale)->title }}</span>
+			<a href="{{ route('frontend.home.index') }}">{{ __('Home') }}</a><span>@include('frontend.template-1.components.directional-icon', ['icon' => 'angles-right', 'class' => 'mx-2']){{ $servicePage->translation($locale)->title }}</span>
 		</div>
 	</div>
 </section>
@@ -79,8 +78,7 @@ null, true);
 								class="{{ $item->id === $servicePage->id ? 'active' : '' }}">
 								<a
 									href="{{ route('frontend.services.show', $item->slug) }}">{{ $itemTranslation->title }}</a>
-								<i
-									class="fa-regular fa-arrow-right-long primary-color"></i>
+								@include('frontend.template-1.components.directional-icon', ['class' => 'primary-color'])
 							</li>
 							@endforeach
 						</ul>

@@ -86,6 +86,9 @@ $(document).ready(function() {
                 orderable: false,
                 render: function(data, type, row) {
                     return `
+                        <a href="{{ url('cms/pages') }}/${row.id}/builder" class="btn btn-sm btn-warning" title="{{ __('Page Builder') }}">
+                            <i class="mdi mdi-puzzle-edit-outline"></i>
+                        </a>
                         <a href="{{ url('cms/pages') }}/${row.id}" class="btn btn-sm btn-success">
                             <i class="mdi mdi-eye"></i>
                         </a>

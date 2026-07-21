@@ -59,6 +59,11 @@
   								<span>{{__('Add Page')}}</span>
   							</a>
   						</li>
+  						<li>
+  							<a href="{{ route('cms.pages.index') }}">
+  								<span>{{__('Page Builder')}}</span>
+  							</a>
+  						</li>
   					</ul>
   				</div>
   			</li>

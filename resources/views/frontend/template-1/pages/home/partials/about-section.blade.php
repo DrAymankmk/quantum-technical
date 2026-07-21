@@ -85,7 +85,7 @@ $smallImage = $aboutImages->get(1);
 				<div class="about__info mt-50 wow fadeInDown" data-wow-delay="400ms"
 					data-wow-duration="1500ms">
 					<a href="{{ route('frontend.about.index') }}" class="btn-one">{{ __('Explore More') }}
-						<i class="fa-regular fa-arrow-right-long"></i></a>
+						@include('frontend.template-1.components.directional-icon')</a>
 
 				</div>
 			</div>

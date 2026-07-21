@@ -16,15 +16,16 @@ $topHeaderLinks = $topHeaderSection ? $topHeaderSection->links()->active()->orde
 					<i class="{{ $link->icon }}"></i>
 					@endif
 
-					<a href="{{ $link->link }}" class="ms-1">{{ $link->getTranslatedAttribute('name') ?? $link->name }}</a>
+					<a href="{{ $link->link }}"
+						class="ms-1">{{ $link->getTranslatedAttribute('name') ?? $link->name }}</a>
 				</li>
 				@endforeach
 				@endif
 
-				
+
 			</ul>
 			<ul class="link-info">
-@foreach($topHeaderLinks->where('type', 'social-link') as $link)
+				@foreach($topHeaderLinks->where('type', 'social-link') as $link)
 				<li><a href="{{ $link->link }}"><i class="{{ $link->icon }}"></i></a></li>
 				@endforeach
 			</ul>
@@ -74,10 +75,10 @@ $topHeaderLinks = $topHeaderSection ? $topHeaderSection->links()->active()->orde
 						<li>
 							<a href="#0">
 								@if (App::getLocale() == 'ar')
-								<img src="{{ asset('backend/assets/images/flags/eg.png') }}"
+								<img src="{{ asset('backend/assets/images/flags/sa.png') }}"
 									alt=""
 									style="width: 20px; height: auto; margin-right: 5px;">
-								{{ LaravelLocalization::getCurrentLocaleName() }}
+								عربى
 								@else
 								<img src="{{ asset('backend/assets/images/flags/us.png') }}"
 									alt=""
@@ -123,8 +124,8 @@ $topHeaderLinks = $topHeaderSection ? $topHeaderSection->links()->active()->orde
 			</div>
 			<div class="d-none d-lg-inline-block">
 				<a href="{{ route('frontend.contact.index') }}"
-					class="btn-one">{{ __('Get A Quote') }} <i
-						class="fa-regular fa-arrow-right-long"></i></a>
+					class="btn-one">{{ __('Get A Quote') }}
+					@include('frontend.template-1.components.directional-icon')</a>
 			</div>
 			<div class="bars d-block d-lg-none">
 				<i id="openButton" class="fa-solid fa-bars"></i>

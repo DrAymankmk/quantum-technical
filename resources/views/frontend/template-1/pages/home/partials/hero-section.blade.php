@@ -98,7 +98,7 @@ $heroSection = $homePage->sections->where('name', 'Hero')->first();
 							data-delay=".9s"
 							href="{{ route('frontend.about.index') }}"
 							class="btn-one mt-60">{{ __('Explore More') }}
-							<i class="fa-regular fa-arrow-right-long"></i></a>
+							@include('frontend.template-1.components.directional-icon')</a>
 					</div>
 				</div>
 			</div>

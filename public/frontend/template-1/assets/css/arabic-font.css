@@ -1,0 +1,38 @@
+:root {
+  --kumbh: "Cairo", sans-serif;
+  --quicksand: "Cairo", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a,
+span,
+li,
+label,
+input,
+textarea,
+select,
+button,
+.btn,
+.btn-one,
+.form-control,
+.nav-link,
+.dropdown-item,
+.card-title,
+.page-title,
+.section-header,
+.side-nav-link {
+  font-family: "Cairo", sans-serif;
+}

@@ -68,7 +68,7 @@ $translation = $whoWeAreSection->translation($locale);
 					</div>
 				</div>
 				<!-- <div class="about__info mt-50 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <a href="#0" class="btn-one">Explore More <i class="fa-regular fa-arrow-right-long"></i></a>
+                            <a href="#0" class="btn-one">Explore More @include('frontend.template-1.components.directional-icon')</a>
                             <img src="assets/images/about/singature.png" alt="singature">
                         </div> -->
 			</div>

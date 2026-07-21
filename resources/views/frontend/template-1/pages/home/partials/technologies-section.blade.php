@@ -33,7 +33,7 @@ $translation = $technologiesSection->translation($locale);
 			</div>
 			<a href="{{ route('frontend.services.index') }}" class="btn-one wow fadeInUp" data-wow-delay="200ms"
 				data-wow-duration="1500ms">{{ __('Explore More') }}
-				<i class="fa-regular fa-arrow-right-long"></i></a>
+				@include('frontend.template-1.components.directional-icon')</a>
 		</div>
 		<div class="row g-4">
 			@foreach ($technologiesSection->items as $item)

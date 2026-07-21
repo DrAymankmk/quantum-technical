@@ -19,7 +19,7 @@
 	<div class="container">
 		<h2 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">{{ __('IT Services') }}</h2>
 		<div class="breadcrumb-list wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-			<a href="{{ route('frontend.home.index') }}">{{ __('Home') }}</a><span><i class="fa-regular fa-angles-right mx-2"></i>{{ __('IT Services') }}</span>
+			<a href="{{ route('frontend.home.index') }}">{{ __('Home') }}</a><span>@include('frontend.template-1.components.directional-icon', ['icon' => 'angles-right', 'class' => 'mx-2']){{ __('IT Services') }}</span>
 		</div>
 	</div>
 </section>

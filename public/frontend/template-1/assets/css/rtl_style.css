@@ -3733,7 +3733,7 @@ input.main-search-input::placeholder {
   position: absolute;
   bottom: 40px;
   width: 100%;
-  left: 30px;
+  left: -30px;
 }
 .case__btn {
   opacity: 0;

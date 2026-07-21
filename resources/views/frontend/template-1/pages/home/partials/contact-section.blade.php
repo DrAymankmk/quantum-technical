@@ -63,7 +63,7 @@ $getInTouchTranslation = $getInTouchSection->translation($locale);
 							</div>
 						</div>
 						<button class="btn-one">{{ __('Send Message') }}
-							<i class="fa-regular fa-arrow-right-long"></i></button>
+							@include('frontend.template-1.components.directional-icon')</button>
 					</form>
 				</div>
 			</div>

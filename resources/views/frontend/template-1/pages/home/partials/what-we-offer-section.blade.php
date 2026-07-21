@@ -26,8 +26,8 @@ $translation = $whatWeOfferSection->translation($locale);
 				</h2>
 			</div>
 			<a href="{{ route('frontend.services.index') }}" class="btn-one wow fadeInUp"
-				data-wow-delay="200ms" data-wow-duration="1500ms">View All
-				Services <i class="fa-regular fa-arrow-right-long"></i></a>
+				data-wow-delay="200ms" data-wow-duration="1500ms">{{ __('View All Services') }}
+				@include('frontend.template-1.components.directional-icon')</a>
 		</div>
 		<div class="row g-4">
 			@foreach ($whatWeOfferSection->items as $item)
@@ -42,17 +42,12 @@ $translation = $whatWeOfferSection->translation($locale);
 							alt="shape">
 					</div>
 
-					@php
-					$imageUrl = get_media_url( $item, 'images', $locale, null, true);
-					@endphp
-					@if($imageUrl)
-					<div class="service__icon"> <img src="{{ $imageUrl }}"
-							alt="{{ $itemTranslation->title ?? '' }}"> </div>
-					@else
-					<div class="service__icon"> <img
-							src="{{ asset('frontend/template-1/assets/images/icon/service-icon1.png') }}"
-							alt="icon"> </div>
-					@endif
+					@include('frontend.template-1.components.cms-item-icon', [
+						'item' => $item,
+						'locale' => $locale,
+						'wrapperClass' => 'service__icon',
+					])
+
 					<h4><a href="service-details.html">{{ $itemTranslation->title ?? '' }} </a>
 					</h4>
 					{!! $itemTranslation->content ?? '' !!}

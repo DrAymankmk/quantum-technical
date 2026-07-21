@@ -7,6 +7,9 @@
         <div class="col-12">
             <div class="page-title-box">
                 <div class="page-title-right">
+                    <a href="{{ route('cms.pages.builder', $page) }}" class="btn btn-warning">
+                        <i class="mdi mdi-puzzle-edit-outline"></i> {{ __('Page Builder') }}
+                    </a>
                     <a href="{{ route('cms.pages.index') }}" class="btn btn-secondary">
                         <i class="mdi mdi-arrow-left"></i> {{ __('Back') }}
                     </a>

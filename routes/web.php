@@ -8,6 +8,7 @@ use App\Http\Controllers\CmsSectionController;
 use App\Http\Controllers\CmsItemController;
 use App\Http\Controllers\CmsLinkController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\PageBuilderController;
 use App\Http\Controllers\TranslationController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use App\Http\Controllers\Frontend\HomeController;
@@ -63,6 +64,8 @@ Route::get('/service-solutions', [ServiceSolutionController::class, 'index'])->n
                 // Pages (Full Page CRUD)
                 Route::get('pages/data', [CmsPageController::class, 'data'])->name('pages.data');
                 Route::post('pages/{page}/toggle-status', [CmsPageController::class, 'toggleStatus'])->name('pages.toggle-status');
+                Route::get('pages/{page}/builder', [PageBuilderController::class, 'edit'])->name('pages.builder');
+                Route::put('pages/{page}/builder', [PageBuilderController::class, 'update'])->name('pages.builder.update');
                 Route::resource('pages', CmsPageController::class);
 
                 // Sections (Full Page CRUD)

@@ -163,6 +163,13 @@ class CmsItemController extends Controller
             }
         }
 
+        if ($request->input('redirect') === 'builder') {
+            $item->load('section');
+
+            return redirect()->route('cms.pages.builder', $item->section->cms_page_id)
+                ->with('success', __('Item created successfully'));
+        }
+
         return redirect()->route('cms.items.index', ['section_id' => $item->cms_section_id])
             ->with('success', __('Item created successfully'));
     }
@@ -211,6 +218,7 @@ class CmsItemController extends Controller
 
         $item->update([
             'cms_section_id' => $validated['cms_section_id'],
+            'slug' => $validated['slug'],
             'settings' => $validated['settings'] ?? null,
             'is_active' => $request->boolean('is_active', true),
             'order' => $validated['order'] ?? 0,
@@ -299,5 +307,21 @@ class CmsItemController extends Controller
             'message' => __('Status updated successfully'),
             'is_active' => $item->is_active,
         ]);
+    }
+
+    /**
+     * Get the form partial for AJAX requests.
+     */
+    public function getForm(Request $request, ?CmsItem $item = null)
+    {
+        $languages = CmsLanguage::active()->ordered()->get();
+        $sections = CmsSection::with('page')->orderBy('order')->get();
+        $selectedSectionId = $request->get('section_id');
+
+        if ($item) {
+            $item->load('translations');
+        }
+
+        return view('backend.cms.items.ajax_form', compact('item', 'languages', 'sections', 'selectedSectionId'));
     }
 }
