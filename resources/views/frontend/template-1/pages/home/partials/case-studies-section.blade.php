@@ -86,10 +86,10 @@ $translation = $caseStudiesSection->translation($locale);
 									class="text-white primary-hover">{{ $itemTranslation->title ?? '' }}</a>
 							</h3>
 						</div>
-						<a href="{{ route('frontend.services.show', $item->slug) }}"
+						<!-- <a href="{{ route('frontend.services.show', $item->slug) }}"
 							class="case__btn">
 							@include('frontend.template-1.components.directional-icon', ['icon' => 'arrow-right'])
-						</a>
+						</a> -->
 					</div>
 				</div>
 				@endforeach
